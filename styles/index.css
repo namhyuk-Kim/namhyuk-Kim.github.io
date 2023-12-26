@@ -63,6 +63,7 @@
     text-align: center;
     width: 300px;
     margin-top: 8px;
+    cursor: pointer;
 }
 
 .result__nickname{

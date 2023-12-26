@@ -28,11 +28,9 @@ const Search = () => {
         })
           .then(response => response.json())
           .then(data => {
-            
-            console.log(data.ranking);
             data.ranking.map((index) => {
                 Result_items = Result_items + `
-                    <div class="result__item__wrapper">
+                    <div class="result__item__wrapper" onclick="Go_maplegg('${index.character_name}')">
                         <div class="result__nickname">
                             ${index.character_name}
                         </div>
@@ -53,4 +51,9 @@ const Search = () => {
       })
       .catch(error => console.error(error))
       
+}
+
+const Go_maplegg = (nickname) => {
+    const link = `https://maple.gg/u/${nickname}`;
+    window.open(link);
 }
