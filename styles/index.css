@@ -1,10 +1,12 @@
+
 .wrap{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .title{
@@ -17,7 +19,9 @@
 }
 
 .input__wrapper{
-    width: 700px;
+    width: 100%;
+    max-width: 700px;
+    min-width: 375px;
     height: 150px;
     border-radius: 8px;
     display: flex;
@@ -83,3 +87,8 @@
     font-weight: 700;
 }
 
+@media (max-width:690px) {
+    .result__item__wrapper{
+        width: calc(100% - 340px);
+    }
+}
