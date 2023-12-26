@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/index.css">
-    <title>유니온랭킹검색기</title>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/css/uikit.min.css" />
+    <title>유니온 랭킹 검색기</title>
 </head>
 <body>
-    <div class="wrap">
+    <div class="wrap uk-background-primary">
         <div class="title">
-            유니온랭킹검색기
+            유니온 랭킹 검색기
         </div>
-        <div class="input__wrapper">
-            <input type="text" placeholder="닉네임을 입력해주세요" id="ucid__nickname" class="input__nickname">
-            <button class="input__search" onclick="Search()">
+        <div class="input__wrapper uk-background-muted">
+            <input type="text" placeholder="닉네임을 입력해주세요" id="ucid__nickname" class="uk-input">
+            <button class="uk-button uk-button-secondary" onclick="Search()">
                 검색
             </button>
         </div>

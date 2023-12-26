@@ -30,15 +30,18 @@ const Search = () => {
           .then(data => {
             data.ranking.map((index) => {
                 Result_items = Result_items + `
-                    <div class="result__item__wrapper" onclick="Go_maplegg('${index.character_name}')">
-                        <div class="result__nickname">
+                    <div class="result__item__wrapper uk-background-secondary uk-card uk-card-default uk-card-body" onclick="Go_maplegg('${index.character_name}')">
+                        <div class="result__maplegg__icon">
+                            <img src='https://cdn.dak.gg/maple/images/logo/logo-full-maplegg-white.svg' alt='maplegg_logo' />
+                        </div>
+                        <div class="result__nickname uk-text-muted">
                             ${index.character_name}
                         </div>
-                        <div class="result__world">
+                        <div class="result__world uk-text-muted">
                             ${index.world_name}
                         </div>
-                        <div class="result__unionlv">
-                            ${index.union_level}
+                        <div class="result__unionlv uk-text-muted">
+                            LV. ${index.union_level}
                         </div>
                     </div>
                 `
