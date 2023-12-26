@@ -3,6 +3,14 @@ const API_KEY = "test_db521b39d8749a2cb29f14394368ff9d1e2bc9ca58c746db0dbe6dfe6a
 var Result_items = ""
 const Result_wrap = document.getElementById("result");
 
+const today = new Date();
+
+const year = today.getFullYear();
+const month = ('0' + (today.getMonth() + 1)).slice(-2);
+const day = ('0' + today.getDate()).slice(-2);
+
+const dateString = year + '-' + month  + '-' + day;
+
 const Search = () => {
     Result_items = "";
     Result_wrap.innerHTML = "";
@@ -20,7 +28,7 @@ const Search = () => {
     })
       .then(response => response.json())
       .then(data => {
-        const Get_rank = `https://open.api.nexon.com/maplestory/v1/ranking/union?date=2023-12-26&ocid=${data.ocid}`
+        const Get_rank = `https://open.api.nexon.com/maplestory/v1/ranking/union?date=${dateString}&ocid=${data.ocid}`
         const rank_answer = fetch(Get_rank, {
             headers:{
               "x-nxopen-api-key": API_KEY
