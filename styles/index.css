@@ -1,16 +1,24 @@
+html{
+    overflow-x: hidden;
+    height: 100vh;
+}
+body{
+    overflow-x: hidden;
+    min-width: 100vw;
+    min-height: 100vh;
+}
 
 .wrap{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow-x:hidden;
 }
 
 .title{
-    width: 100%;
+    width: 80%;
     text-align: center;
     padding: 50px 0 50px 0;
     color: #fff;
