@@ -5,6 +5,7 @@ const Result_wrap = document.getElementById("result");
 
 const Search = () => {
     Result_items = "";
+    Result_wrap.innerHTML = "";
     const Nickname = document.getElementById("ucid__nickname").value;
     if(!Nickname){
         alert("닉네임을 입력해주세요.");
